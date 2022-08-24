@@ -12,7 +12,7 @@ serverPort = 8080
 
 
 def parseToPulseData(filename):
-    ret = subprocess.run(["rtl_433", "-R", "0", "-F", "null", "-w", "OOK:-", filename], capture_output=True)
+    ret = subprocess.run(["rtl_433", "-F", "null", "-w", "OOK:-", filename], capture_output=True)
     return ret.stdout
 
 
